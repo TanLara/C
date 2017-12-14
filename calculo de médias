@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+// Coded by Nate
+// UTF-8
+// Data Conclusão 13-12-2017
+
+int main(){
+
+	cout << "Digite a quantidade de notas: " << endl;
+	int qt;
+	cin >> qt; // pega a quantidade de notas que o usuario irá digidar.
+
+		if(qt <= 0){ // caso o usuário digite algum valor menor ou igual a zero, irá retornar ao início do programa.
+			cout << "Quantidade Invalida!\n" << endl;
+			return main();
+		}
+
+	int nt[qt]; // definição de uma Array chamada 'nt' que a quantidade de elementos é igual a quantidade de notas digitadas pelo usuário.
+	float tot = 0; // variavel total com o valor inicial zero para somar com as notas.
+
+		for(int i = 0; i < qt; i++){ // 'i' é inicialmente zero e, enquanto for menor que a quantidade ('qt'), irá sofrer um encremento.
+			cout << "Digite a nota " << i+1 << " : " << endl;
+			cin >> nt[i]; // armazena a nota digitada na Array 'nt', sendo que o 'i' representa em qual elemento a nota será armazenada.
+			tot += nt[i]; // o total, que inicialmente é zero, será somado com a nota digitada na array 'nt', sendo que todos os valores...
+	                  // ...digitados nessa array irão ser novamente somados até dar um "total final".
+		}
+
+	cout << "Media = " << (tot / qt) << " <---" <<"\n" <<endl; // por fim irá pegar o total e dividir pela quantidade de notas, dando assim, a média.
+
+	return main(); // retorna para o início do programa.
+}
