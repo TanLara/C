@@ -1,9 +1,9 @@
+#include <iostream>
+using namespace std;
+
 // Coded by Nate
 // UTF-8
 // Data Conclusão 10-12-2017
-
-#include <iostream>
-using namespace std;
 
 int main(){
 
